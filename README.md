@@ -7,4 +7,3 @@ agar kalian dapat menjalankan program diatas, kalian bisa download dan install *
 untuk mempermudah kalian dalam menjalankan code dari materi, saya sarankan untuk mencoba masing-masing implementasinya pada file *index.js* di luar dari folder Materi, kalian bisa menjalankan kode dengan `node index.js` pada CMD atau terminal vscode kalian
 
 jika ada yang mau ditanyakan, bisa bertanya melalui discord GDGOC member pada channel #web-chat
-
