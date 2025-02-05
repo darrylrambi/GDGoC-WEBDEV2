@@ -51,11 +51,13 @@ const updateNote = (id, heading, description) => {
 
 const deleteNote = (id) => {
   // kode kalian
-  const note = notes.filter(note => note.id !== id);
+  notes = notes.filter(note => note.id !== id);
 
-  if(!note) {
+  if(!notes) {
     console.log("Note tidak ditemukan")
   }
+
+  console.log("Berhasil hapus note!")
 }
 
 // mengetes kode (diharapkan untuk tidak diganti): 
