@@ -8,12 +8,26 @@ let notes = [
   }
 ]
 
-const createNote = () => {
+const createNote = (id, heading, description, created_by) => {
   // kode kalian
+  const created_at = Date.now();
+
+  notes.push({
+    id,
+    heading,
+    description,
+    created_at,
+    created_by
+  })
+
+  console.log("Berhasil menambahkan notes baru")
 }
 
 const readNote = () => {
   // kode kalian
+  notes.forEach(note => {
+    console.log(`ID: ${note.id}, Title: ${note.heading}, Author: ${note.created_by}`);
+  });
 }
 
 const updateNote = () => {
