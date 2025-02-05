@@ -8,9 +8,10 @@ let notes = [
   }
 ]
 
-const createNote = (id, heading, description, created_by) => {
+const createNote = (heading, description, created_by) => {
   // kode kalian
   const created_at = Date.now();
+  const id = 2
 
   notes.push({
     id,
