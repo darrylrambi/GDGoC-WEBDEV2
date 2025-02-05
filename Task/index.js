@@ -8,20 +8,56 @@ let notes = [
   }
 ]
 
-const createNote = () => {
+const createNote = (heading, description, created_by) => {
   // kode kalian
+  const created_at = Date.now();
+  const id = 2
+
+  notes.push({
+    id,
+    heading,
+    description,
+    created_at,
+    created_by
+  })
+
+  console.log("Berhasil menambahkan notes baru!")
 }
 
 const readNote = () => {
   // kode kalian
+  notes.forEach(note => {
+    console.log(`ID: ${note.id}`);
+    console.log(`Judul: ${note.heading}`);
+    console.log(`Pembuat: ${note.created_by}`);
+    console.log(`Tanggal buat: ${note.created_at}`);
+    console.log(`Deskripsi: ${note.description}`);
+  });
 }
 
-const updateNote = () => {
+const updateNote = (id, heading, description) => {
   // kode kalian
+  const note = notes.find(note => note.id === id);
+
+  if(!note) {
+    console.log("Note tidak ditemukan!")
+  }
+
+  note.heading = heading
+  note.description = description
+
+  console.log("Berhasil update note!")
 }
 
-const deleteNote = () => {
+const deleteNote = (id) => {
   // kode kalian
+  notes = notes.filter(note => note.id !== id);
+
+  if(!notes) {
+    console.log("Note tidak ditemukan")
+  }
+
+  console.log("Berhasil hapus note!")
 }
 
 // mengetes kode (diharapkan untuk tidak diganti): 
