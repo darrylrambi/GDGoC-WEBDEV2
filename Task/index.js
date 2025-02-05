@@ -30,8 +30,16 @@ const readNote = () => {
   });
 }
 
-const updateNote = () => {
+const updateNote = (id, heading, description) => {
   // kode kalian
+  const note = notes.find(note => note.id === id);
+
+  if(!note) {
+    console.log("Note tidak ditemukan")
+  }
+
+  note.heading = heading
+  note.description = description
 }
 
 const deleteNote = () => {
