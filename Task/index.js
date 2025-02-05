@@ -20,13 +20,17 @@ const createNote = (id, heading, description, created_by) => {
     created_by
   })
 
-  console.log("Berhasil menambahkan notes baru")
+  console.log("Berhasil menambahkan notes baru!")
 }
 
 const readNote = () => {
   // kode kalian
   notes.forEach(note => {
-    console.log(`ID: ${note.id}, Title: ${note.heading}, Author: ${note.created_by}`);
+    console.log(`ID: ${note.id}`);
+    console.log(`Judul: ${note.heading}`);
+    console.log(`Pembuat: ${note.created_by}`);
+    console.log(`Tanggal buat: ${note.created_at}`);
+    console.log(`Deskripsi: ${note.description}`);
   });
 }
 
@@ -35,15 +39,22 @@ const updateNote = (id, heading, description) => {
   const note = notes.find(note => note.id === id);
 
   if(!note) {
-    console.log("Note tidak ditemukan")
+    console.log("Note tidak ditemukan!")
   }
 
   note.heading = heading
   note.description = description
+
+  console.log("Berhasil update note!")
 }
 
-const deleteNote = () => {
+const deleteNote = (id) => {
   // kode kalian
+  const note = notes.filter(note => note.id !== id);
+
+  if(!note) {
+    console.log("Note tidak ditemukan")
+  }
 }
 
 // mengetes kode (diharapkan untuk tidak diganti): 
